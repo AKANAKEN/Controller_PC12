@@ -2,6 +2,7 @@
 setlocal enabledelayedexpansion
 
 :menu
+cls
 color b
 echo Pilih konversi suhu yang diinginkan:
 echo 1. Celsius ke Fahrenheit

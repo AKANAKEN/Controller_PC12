@@ -53,5 +53,5 @@ goto end
 :end
 pause
 
-call Program.bat
+call halaman_kalkulator.bat
 goto end
