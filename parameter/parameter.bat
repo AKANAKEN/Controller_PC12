@@ -10,6 +10,7 @@ echo 2. Perhitungan watt
 echo 3. Speedtest (Okla)
 echo 4. Suhu Converter
 echo 5. Wifi Database
+echo 6. Back
 echo =============================
 set /p choice=Masukkan pilihan (1-4): 
 
@@ -18,6 +19,7 @@ if %choice%==2 goto file2
 if %choice%==3 goto file3
 if %choice%==4 goto file4
 if %choice%==5 goto file5
+if %choice%==6 goto file6
 
 if %choice%==exit goto end
 
@@ -44,6 +46,11 @@ goto end
 :file5
 call wifi.bat
 goto end
+
+:file6
+cls
+call Back.bat
+
 
 :end
 echo Selesai menjalankan file.

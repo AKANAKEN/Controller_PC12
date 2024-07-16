@@ -9,12 +9,17 @@ echo ==========================
 echo Pilih perhitungan yang diinginkan:
 echo 1. Bit ke Byte
 echo 2. Watt (Tegangan x Arus)
-set /p choice=Masukkan pilihan (1 atau 2):
+echo 3. Back
+set /p choice=Masukkan pilihan (1 - 3):
 
 if "%choice%"=="1" goto bit_to_byte
 if "%choice%"=="2" goto watt_calculation
+if "%choice%"=="2" goto back
 
 echo Pilihan tidak valid.
+goto menu
+
+:back
 goto menu
 
 :bit_to_byte
@@ -49,6 +54,8 @@ set /a watt=%voltage% * %current%
 
 echo Daya (Watt) = %watt% Watt
 goto end
+
+
 
 :end
 pause

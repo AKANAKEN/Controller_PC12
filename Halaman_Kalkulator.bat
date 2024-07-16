@@ -188,7 +188,6 @@ pause
 goto end
 
 
-
 :end
 echo Selesai menjalankan file.
 pause

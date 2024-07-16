@@ -29,7 +29,7 @@ goto menu
 
 :file1
 call parameter\parameter.bat
-goto end
+
 
 :file2
 call Perhitungan_watt.bat
