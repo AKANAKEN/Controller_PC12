@@ -11,7 +11,8 @@ echo ! 3 !  Parameter Monitor		 =
 echo ! 4 !  Parameter Motherboard	 =	
 echo ! 5 !  Parameter RAM		 =	 
 echo ! 6 !  Parameter Storage		 =	
-echo ! 7 !  Parameter Wireless		 =	
+echo ! 7 !  Parameter Wireless		 =
+echo ! 8 !  Back			 =	
 echo =====================================
 set /p choice=Masukkan pilihan (1-4): 
 
@@ -22,12 +23,16 @@ if %choice%==4 goto file4
 if %choice%==5 goto file5
 if %choice%==6 goto file6
 if %choice%==7 goto file7
+if %choice%==8 goto back
 
 if %choice%==exit goto end
 
 echo Pilihan tidak valid, silakan coba lagi.
 pause
 goto menu
+
+:back
+call Home_Program.bat
 
 :file1
 cls

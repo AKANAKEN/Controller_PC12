@@ -9,6 +9,7 @@ echo 1. Bit ke Byte Converter
 echo 2. Watt Calculator
 echo 3. Suhu Converter
 echo 4. Kalkulator Monitor
+echo 5. Back
 echo =============================
 set /p choice=Masukkan pilihan (1-4): 
 
@@ -16,11 +17,14 @@ if "%choice%"=="1" goto bit_to_byte
 if "%choice%"=="2" goto watt_calculation
 if "%choice%"=="3" goto file3
 if "%choice%"=="4" goto file4
+if "%choice%"=="5" goto back
 
 echo Pilihan tidak valid, silakan coba lagi.
 pause
 goto menu
 
+:back
+call Home_Program.bat
 
 :bit_to_byte
 echo Masukkan jumlah Bit:

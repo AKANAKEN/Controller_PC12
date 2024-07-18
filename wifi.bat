@@ -1,4 +1,5 @@
 @echo off
+cls
 color b
 rem Menampilkan daftar semua profil Wi-Fi
 netsh wlan show profiles
@@ -10,5 +11,5 @@ rem Menampilkan detail profil Wi-Fi yang dipilih
 netsh wlan show profiles name="%name%" key=clear
 pause
 
-call Program.bat
+call Home_Program.bat
 goto end
