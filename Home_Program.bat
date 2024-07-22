@@ -48,4 +48,5 @@ goto end
 
 :end
 echo Selesai menjalankan file.
+exit
 pause
