@@ -1,0 +1,5 @@
+Nekomachi Studio,https://nekomachistudio.com/ 
+W3school,https://www.w3schools.com/ 
+Web WhatsApp,https://web.whatsapp.com/ 
+TL-MR100,http://192.168.100.48/ 
+TL-WR840N,http://192.168.100.56/ 
