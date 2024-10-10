@@ -3,3 +3,7 @@ W3school,https://www.w3schools.com/
 Web WhatsApp,https://web.whatsapp.com/ 
 TL-MR100,http://192.168.100.48/ 
 TL-WR840N,http://192.168.100.56/ 
+link chaker From Northon,https://safeweb.norton.com/ 
+Indonesia Cyber Crime,https://ic4.id/layanan/cek-data?kategori=url 
+bootstrapmade,https://bootstrapmade.com/selecao-bootstrap-template/ 
+creative tim bootstrap,https://www.creative-tim.com/bootstrap-themes/free 
