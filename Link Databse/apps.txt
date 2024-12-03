@@ -1,0 +1,4 @@
+Discord,C:\Users\AKANAKEN\AppData\Local\Discord\app-1.0.9170\Discord.exe
+CPUZ,C:\Program Files\CPUID\TAICHI CPU-Z\cpuz.exe
+AsrPolychrome,C:\Program Files (x86)\ASRock Utility\ASRRGBLED\Bin\AsrPolychromeRGB.exe 
+
