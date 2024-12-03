@@ -14,7 +14,7 @@ set "DOWNLOAD_FOLDER=%CURRENT_DIR%"
 :: Membersihkan layar
 cls
 echo ========================================
-echo        YouTube Downloader Batch
+echo        Link YouTube Downloader
 echo ========================================
 echo.
 
@@ -25,7 +25,7 @@ set /p "URL=Masukkan URL YouTube: "
 echo Pilih format:
 echo 1. Video (MP4)
 echo 2. Audio (MP3)
-set /p "CHOICE=Masukkan pilihan (1 atau 2): "
+set /p "CHOICE=Masukkan pilihan (1 and 2): "
 
 if "%CHOICE%"=="1" (
     echo Mendownload video dalam format MP4...
@@ -37,12 +37,11 @@ if "%CHOICE%"=="1" (
     echo Audio berhasil diunduh di %DOWNLOAD_FOLDER%.
 ) else (
     echo Pilihan tidak valid. Silakan coba lagi.
+goto menu1
 )
-pause
 
-echo Next . . .
 goto file2
-pause
+
 
 :file2
 color b
@@ -130,4 +129,25 @@ move *.mp4 Hasil >nul 2>&1
 
 REM Beri konfirmasi
 echo Semua file MP3 dan MP4 telah dipindahkan ke folder "Hasil".
-exit
+goto menu1
+
+
+:menu1
+:: Membersihkan layar
+cls
+echo ========================================
+echo        YouTube Downloader Batch
+echo ========================================
+echo.
+
+:: Pilihan download (video atau audio)
+echo Pilih format:
+echo 1. Download More
+echo 2. exit
+set /p "CHOICE=Masukkan pilihan (1/2): "
+
+if "%CHOICE%"=="1" (
+goto menu
+) else (
+	exit
+)
