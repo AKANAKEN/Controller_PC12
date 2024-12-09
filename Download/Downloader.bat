@@ -1,3 +1,4 @@
+
 @echo off
 color b
 
@@ -144,6 +145,10 @@ echo.
 echo Pilih format:
 echo 1. Download More
 echo 2. exit
+echo ========================================
+echo       Development By Akanaken 1140
+echo ========================================
+echo.
 set /p "CHOICE=Masukkan pilihan (1/2): "
 
 if "%CHOICE%"=="1" (
