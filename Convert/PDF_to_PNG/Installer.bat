@@ -9,5 +9,5 @@ if %errorlevel% neq 0 (
 )
 
 echo Running your Python script...
-python C:\Users\Kevin\Documents\Controller_PC12\Convert\convrt.py
+python convrt.py
 pause
