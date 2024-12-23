@@ -1,0 +1,487 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link media="all" href="https://www.hwinfo.com/wp-content/cache/autoptimize/css/autoptimize_efd9b2cc111aabb1bfd5a678db5ce7d7.css" rel="stylesheet"><title>Free Download HWiNFO Sofware | Installer &amp; Portable for Windows, DOS</title>  <script type="text/javascript" async=true>(function() {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'kCrg4WDGVf2XW', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+        if(args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+      } catch (ignore) {}
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+          function(retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+      } catch (ignore) {}
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+  var uspStubFunction = function() {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+      setTimeout(function() {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+  var checkIfUspIsReady = function() {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+})();</script> <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0"><link rel="icon" href="https://www.hwinfo.com/favicon.ico"><link rel="apple-touch-icon" href="/images/hwi_logo_flat_square_192.png"> <!--[if lt IE 9]><link href="https://www.hwinfo.com/wp-content/themes/hwinfo/ie.min.css" rel="stylesheet"><script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]--> <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <script type="text/javascript">var contactform = [];
+		var checkIfCalled = true;
+		var renderGoogleInvisibleRecaptchaFront = function() {
+			//jQuery(document).ready(function(){
+				// prevent form submit from enter key
+				jQuery("input[name=_wpcf7]").attr("class","formid");
+					jQuery('.wpcf7-form').on('keyup keypress', "input", function(e) {
+					  var keyCode = e.keyCode || e.which;
+					  if (keyCode === 13) {
+						e.preventDefault();
+						return false;
+					  }
+					});
+
+				jQuery('.wpcf7-submit').each(function(index){
+
+					var checkexclude = 0;
+					var form = jQuery(this).closest('.wpcf7-form');
+					var value = jQuery(form).find(".formid").val();
+					// check form exclude from invisible recaptcha
+										if(checkexclude == 0){
+						// Hide the form orig submit button
+						form.find('.wpcf7-submit').hide();
+
+						// Fetch class and value of orig submit button
+						btnClasses = form.find('.wpcf7-submit').attr('class');
+						btnValue = form.find('.wpcf7-submit').attr('value');
+
+						// Add custom button and recaptcha holder
+
+						form.find('.wpcf7-submit').after('<input type="button" id="wpcf-custom-btn-'+index+'" class="'+btnClasses+'  recaptcha-btn recaptcha-btn-type-css" value="'+btnValue+'" title="'+btnValue+'" >');
+						form.append('<div class="recaptcha-holder" id="recaptcha-holder-'+index+'"></div>');
+						// Recaptcha rendenr from here
+						var holderId = grecaptcha.render('recaptcha-holder-'+index,{
+									'sitekey':'6LdzYHcUAAAAAAYYObNpso6wcWTWgzOWsFN577PX',
+									'size': 'invisible',
+									'badge' : 'bottomright', // possible values: bottomright, bottomleft, inline
+									'callback' : function (recaptchaToken) {
+										//console.log(recaptchaToken);
+										var response=jQuery('#recaptcha-holder-'+index).find('.g-recaptcha-response').val();
+										//console.log(response);
+										//Remove old response and store new respone
+										jQuery('#recaptcha-holder-'+index).parent().find(".respose_post").remove();
+										jQuery('#recaptcha-holder-'+index).after('<input type="hidden" name="g-recaptcha-response"  value="'+response+'" class="respose_post">')
+										grecaptcha.reset(holderId);
+
+										if(typeof customCF7Validator !== 'undefined'){
+											if(!customCF7Validator(form)){
+												return;
+											}
+										}
+										// Call default Validator function
+										else if(contactFormDefaultValidator(form)){
+											return;
+										}
+										else{
+											// hide the custom button and show orig submit button again and submit the form
+											jQuery('#wpcf-custom-btn-'+index).hide();
+											form.find('input[type=submit]').show();
+											form.find("input[type=submit]").click();
+											form.find('input[type=submit]').hide();
+											jQuery('#wpcf-custom-btn-'+index).attr('style','');
+										}
+									}
+							},false);
+
+						// action call when click on custom button
+						jQuery('#wpcf-custom-btn-'+index).click(function(event){
+							event.preventDefault();
+							// Call custom validator function
+							if(typeof customCF7Validator == 'function'){
+								if(!customCF7Validator(form)){
+									return false;
+								}
+							}
+							// Call default Validator function
+							else if(contactFormDefaultValidator(form)){
+								return false;
+							}
+							else if(grecaptcha.getResponse(holderId) != ''){
+								grecaptcha.reset(holderId);
+							}
+							else{
+								// execute the recaptcha challenge
+								grecaptcha.execute(holderId);
+							}
+						});
+					}
+				});
+			//});
+
+		};
+
+		/*
+			*** This function is to get all the messages related to  contact form
+				You need to pass form id and message key and this function will return contact form message.
+			*** Since: 1.3.0
+			*** @params:
+						1) form id
+						2) message key
+			*** return:
+					Contact form message
+		*/
+		function getContactFormMessage(formid,key){
+			if(contactform == ""){
+				return "";
+			}
+			else{
+				for (var i=0; i<contactform.length; i++){
+					var checkId = contactform[i][0];
+					var checkKey = contactform[i][1];
+					var returnMsg = contactform[i][2];
+
+					if(formid == checkId && checkKey == key){
+						return returnMsg;
+						break;
+					}
+				}
+			}
+		}
+
+		// Default validator function
+		function contactFormDefaultValidator(objForm){
+
+			var formid=jQuery(objForm).find(".formid").val();
+			var havingError = false;
+
+			// Fetch each validation field one by one
+			objForm.find('.wpcf7-validates-as-required').each(function(){
+				jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+				// Check if empty or checkbox checked or not
+				if(!jQuery(this).hasClass('wpcf7-checkbox')){
+					// For GDPR
+					if(jQuery(this).hasClass('wpcf7-wpgdprc')){
+						var checkselected = 0;
+						jQuery(this).find('input').each(function(){
+							if(jQuery(this).prop('checked') == true){
+								checkselected++;
+							}
+						});
+						if(checkselected == 0){
+							jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+							jQuery(this).after('<span class="wpcf7-not-valid-tip" role="alert">'+getContactFormMessage(formid,'gdpr')+'</span>');
+							havingError = true;
+						}
+					}
+					else if(!jQuery(this).val()){
+						jQuery(this).val('');
+						jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+						jQuery(this).after('<span class="wpcf7-not-valid-tip" role="alert">'+getContactFormMessage(formid,'invalid_required')+'</span>');
+						havingError = true;
+					}
+					// Check if not valid email address entered
+					else{
+						if(jQuery(this).attr('class').indexOf("wpcf7-validates-as-email") >= 0){
+							var emailField = jQuery(this).val();
+							if(!validateCustomFormEmail(emailField)){
+								jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+								jQuery(this).after('<span role="alert" class="wpcf7-not-valid-tip">'+getContactFormMessage(formid,'invalid_email')+'</span>');
+								havingError = true;
+							}
+						}
+						// Check if not valid url entered
+						else if(jQuery(this).attr('class').indexOf("wpcf7-validates-as-url") >= 0){
+							var urlField = jQuery(this).val();
+							if(!validateCustomFormurl(urlField)){
+								jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+								jQuery(this).after('<span role="alert" class="wpcf7-not-valid-tip">'+getContactFormMessage(formid,'invalid_url')+'</span>');
+								havingError = true;
+							}
+						}
+						// Check if not valid telephone entered
+						else if(jQuery(this).attr('class').indexOf("wpcf7-validates-as-tel") >= 0){
+							var telField = jQuery(this).val();
+							if(!validateCustomFormtel(telField)){
+								jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+								jQuery(this).after('<span role="alert" class="wpcf7-not-valid-tip">'+getContactFormMessage(formid,'invalid_tel')+'</span>');
+								havingError = true;
+							}
+						}
+						// Check if not valid number entered
+						else if(jQuery(this).attr('class').indexOf("wpcf7-validates-as-number") >= 0){
+							var numField = jQuery(this).val();
+							var min = jQuery(this).attr('min');
+							var max = jQuery(this).attr('max');
+							var testnum = validateCustomFormnum(numField,min,max);
+							if(testnum != 0){
+								jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+								if(testnum ==1){
+									jQuery(this).after('<span role="alert" class="wpcf7-not-valid-tip">'+getContactFormMessage(formid,'invalid_number')+'</span>');
+								}
+								if(testnum ==2){
+									jQuery(this).after('<span role="alert" class="wpcf7-not-valid-tip">'+getContactFormMessage(formid,'invalid_too_long')+'</span>');
+								}
+								if(testnum ==3){
+									jQuery(this).after('<span role="alert" class="wpcf7-not-valid-tip">'+getContactFormMessage(formid,'invalid_too_short')+'</span>');
+								}
+								havingError = true;
+							}
+						}
+						// Check if not valid date entered
+						else if(jQuery(this).attr('class').indexOf("wpcf7-validates-as-date") >= 0){
+							var date = jQuery(this).val();
+							if(!validateCustomFordate(date)){
+								jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+								jQuery(this).after('<span role="alert" class="wpcf7-not-valid-tip">'+getContactFormMessage(formid,'invalid_date')+'</span>');
+								havingError = true;
+							}
+						}
+					}
+				}
+				else{
+					var checkselected = 0;
+					jQuery(this).find('input').each(function(){
+						if(jQuery(this).prop('checked') == true){
+							checkselected++;
+						}
+					});
+					if(checkselected == 0){
+						jQuery(this).parent().find('.wpcf7-not-valid-tip').remove();
+						jQuery(this).after('<span class="wpcf7-not-valid-tip" role="alert">'+getContactFormMessage(formid,'invalid_required')+'</span>');
+						havingError = true;
+					}
+				}
+			});
+			//for acceptance validation
+			if(jQuery(objForm).find('.wpcf7-acceptance').length > 0){
+				if(jQuery(objForm).find('.wpcf7-acceptance').hasClass('wpcf7-invert')){
+					if(jQuery(objForm).find('.wpcf7-acceptance').prop('checked') == true){
+						jQuery(objForm).find('.wpcf7-acceptance').parent().find('.wpcf7-not-valid-tip').remove();
+						jQuery(objForm).find('.wpcf7-acceptance').after('<span class="wpcf7-not-valid-tip" role="alert">'+getContactFormMessage(formid,'accept_terms')+'</span>');
+						havingError = true;
+					}
+					else{
+						jQuery(objForm).find('.wpcf7-acceptance').parent().find('.wpcf7-not-valid-tip').remove();
+					}
+				}
+				else{
+					if(jQuery(objForm).find('.wpcf7-acceptance').prop('checked') == false){
+						jQuery(objForm).find('.wpcf7-acceptance').parent().find('.wpcf7-not-valid-tip').remove();
+						jQuery(objForm).find('.wpcf7-acceptance').after('<span class="wpcf7-not-valid-tip" role="alert">'+getContactFormMessage(formid,'accept_terms')+'</span>');
+						havingError = true;
+					}
+					else{
+						jQuery(objForm).find('.wpcf7-acceptance').parent().find('.wpcf7-not-valid-tip').remove();
+					}
+				}
+			}
+
+			return havingError;
+		}
+		//email validation function
+		function validateCustomFormEmail(email) {
+			var expr = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,10}|[0-9]{1,3})(\]?)$/;
+			return expr.test(email);
+		}
+		//url validation function
+		function validateCustomFormurl(url) {
+			if(url){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		//telephone validation function
+		function validateCustomFormtel(number){
+			var phoneno = /[a-zA-Z]/;
+			if(number.match(phoneno)) {
+				return false;
+			}
+			else {
+				return true;
+			}
+		}
+		//number filed validation function
+		function validateCustomFormnum(number,min,max){
+			if (isNaN(number) ) {
+				return 1;
+			}
+			else {
+				if(min){
+					if(number < min){
+						return 3;
+					}
+				}
+				if(max){
+					if(number > max){
+						return 2;
+					}
+				}
+				return 0;
+			}
+		}
+		//date filed validation function
+		function validateCustomFordate(input) {
+			var status = false;
+			if (!input || input.length <= 0) {
+			  status = false;
+			}
+			else {
+			  var result = new Date(input);
+			  if (result == 'Invalid Date') {
+				status = false;
+			  }
+			  else {
+				status = true;
+			  }
+			}
+			return status;
+		}</script><script  src="https://www.google.com/recaptcha/api.js?onload=renderGoogleInvisibleRecaptchaFront&render=explicit" async defer></script><meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' /><meta name="description" content="Start to analyze your hardware right now! HWiNFO has available as an Installer and Portable version for Windows (32/64-bit) and Portable version for DOS." /><link rel="canonical" href="https://www.hwinfo.com/download/" /><meta property="og:locale" content="en_US" /><meta property="og:type" content="article" /><meta property="og:title" content="Free Download HWiNFO Sofware | Installer &amp; Portable for Windows, DOS" /><meta property="og:description" content="Start to analyze your hardware right now! HWiNFO has available as an Installer and Portable version for Windows (32/64-bit) and Portable version for DOS." /><meta property="og:url" content="https://www.hwinfo.com/download/" /><meta property="og:site_name" content="HWiNFO" /><meta property="article:modified_time" content="2024-08-19T19:08:04+00:00" /><meta property="og:image" content="https://www.hwinfo.com/wp-content/uploads/2018/09/download.png" /><meta property="og:image:width" content="155" /><meta property="og:image:height" content="155" /><meta property="og:image:type" content="image/png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:label1" content="Est. reading time" /><meta name="twitter:data1" content="1 minute" /> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://www.hwinfo.com/download/","url":"https://www.hwinfo.com/download/","name":"Free Download HWiNFO Sofware | Installer & Portable for Windows, DOS","isPartOf":{"@id":"https://www.hwinfo.com/#website"},"primaryImageOfPage":{"@id":"https://www.hwinfo.com/download/#primaryimage"},"image":{"@id":"https://www.hwinfo.com/download/#primaryimage"},"thumbnailUrl":"https://www.hwinfo.com/wp-content/uploads/2018/09/download.png","datePublished":"2018-09-07T10:56:53+00:00","dateModified":"2024-08-19T19:08:04+00:00","description":"Start to analyze your hardware right now! HWiNFO has available as an Installer and Portable version for Windows (32/64-bit) and Portable version for DOS.","breadcrumb":{"@id":"https://www.hwinfo.com/download/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.hwinfo.com/download/"]}]},{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.hwinfo.com/download/#primaryimage","url":"https://www.hwinfo.com/wp-content/uploads/2018/09/download.png","contentUrl":"https://www.hwinfo.com/wp-content/uploads/2018/09/download.png","width":155,"height":155},{"@type":"BreadcrumbList","@id":"https://www.hwinfo.com/download/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.hwinfo.com/"},{"@type":"ListItem","position":2,"name":"Download HWiNFO"}]},{"@type":"WebSite","@id":"https://www.hwinfo.com/#website","url":"https://www.hwinfo.com/","name":"HWiNFO","description":"Hardware Information, Analysis and Monitoring Tools","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.hwinfo.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"}]}</script> <link rel="https://api.w.org/" href="https://www.hwinfo.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://www.hwinfo.com/wp-json/wp/v2/pages/28" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.hwinfo.com/xmlrpc.php?rsd" /><link rel='shortlink' href='https://www.hwinfo.com/?p=28' /><link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://www.hwinfo.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hwinfo.com%2Fdownload%2F" /><link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://www.hwinfo.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.hwinfo.com%2Fdownload%2F&#038;format=xml" />  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5GBZBSWQE"></script> <script>window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-P5GBZBSWQE');</script></head><body class="page-template page-template-template-download page-template-template-download-php page page-id-28"><script type="text/javascript">WebFontConfig = {
+  google:{families:['Lato:400,400italic,700,700italic,latin-ext']}
+};
+(function() {
+  var wf = document.createElement('script');
+  wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+  wf.type = 'text/javascript';
+  wf.async = 'true';
+  var s = document.getElementsByTagName('script')[0];
+  s.parentNode.insertBefore(wf, s);
+})();</script> <div id="totop"><span class="ion-android-arrow-dropup-circle" aria-hidden="true"></span><span class="sr-only">Top</span></div><div class="print-header"> <img src="https://www.hwinfo.com/wp-content/uploads/2018/06/logo_black.png" alt="HWiNFO" width="191" height="50"><div> <span>HWiNFO</span> www.www.hwinfo.com/download/</div><div class="clear"></div></div><header><div class="navbar fixed-top navbar-expand-lg" role="navigation"> <a class="navbar-brand" href="https://www.hwinfo.com"><img src="https://www.hwinfo.com/wp-content/uploads/2018/06/logo-white.png" alt="HWiNFO" width="191" height="50"></a><div> <a class="facebook-mobile-btn" href="https://www.facebook.com/HWiNFO64" target="_blank"><span class="ion-social-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="navbar-toggler-icon"></span> </button></div><div class="collapse navbar-collapse" id="navbarSupportedContent"><div class="menu-menu-container"><nav><ul class="navbar-nav mr-auto"><li id="menu-item-44" class="nav-item has-children menu-item-44"><a class="nav-link" href="https://www.hwinfo.com/about-software/">About HWiNFO®</a><ul class="sub-menu"><li id="menu-item-82" class="nav-item menu-item-82"><a class="nav-link" href="https://www.hwinfo.com/about-software/supported-components/">Supported Components</a></li></ul></li><li id="menu-item-1242" class="nav-item menu-item-1242"><a class="nav-link" href="https://www.hwinfo.com/licenses/">Licensing</a></li><li id="menu-item-115" class="nav-item menu-item-115"><a class="nav-link" href="https://www.hwinfo.com/version-history/">Version History</a></li><li id="menu-item-77" class="nav-item menu-item-77"><a class="nav-link" href="https://www.hwinfo.com/add-ons/">Add-ons</a></li><li id="menu-item-116" class="nav-item menu-item-116"><a class="nav-link" href="https://www.hwinfo.com/sdk/">HWiNFO® SDK</a></li><li id="menu-item-606" class="nav-item menu-item-606"><a class="nav-link" target="_blank" href="https://www.hwinfo.com/forum/">Forum</a></li><li id="menu-item-32" class="nav-item active menu-item-32"><a class="nav-link" href="https://www.hwinfo.com/download/" aria-current="page" title="btn">Download</a></li><li class="facebook-menu nav-item"><a class="nav-link btn btn-blue nav-link-facebook" href="https://www.facebook.com/HWiNFO64" target="_blank"><span class="ion-social-facebook" aria-hidden="true"></span><span class="sr-only">Facebook</span></a></li></ul></nav></div></div></div></header><article><div class="alt-navbar"><div class="alt-navbar-img"><div style="background-image:url(https://www.hwinfo.com/wp-content/uploads/2018/09/download.png)"></div></div><div class="container"><div class="text"><h1>Download HWiNFO</h1><div class="subtitle">Start to analyze your hardware right now!</div></div></div></div><div class="page-wrap"><div class="container text-center"><div class="row"><div class="col-md-6 col-lg-4"><div class="download"><div class="header"> <img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/logo-sm.png" alt=""> <img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/win64.png" alt=""></div><h2>Installer<div>for Windows 7 64-bit and later<br>x64 or ARM64 platform</div></h2> <sub>Version 8.16</sub><div class="xds"> <a href="https://www.hwinfo.com/ref2/LanSw1" target="_blank"><img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/lansweeper-download.png" alt="Lansweeper"></a></div><div class="btn-wrap"><div class="btn btn-less"> Free Download<div class="download-btn"><ul><li><a href="https://sourceforge.net/projects/hwinfo/files/Windows_Installer/hwi64_816.exe/download">SourceForge (Fast CDN)</a></li><li><a href="https://www.hwinfo.com/files/hwi64_816.exe">Local (U.S.)</a></li><li><a href="https://www.sac.sk/download/utildiag/hwi_816x.exe" target="_blank">SAC ftp (SK)</a></li><li><a href="https://www.hwinfo.com/OldFoss" target="_blank">Old versions (Archive)</a></li></ul></div></div></div><p>Automatic installer for HWiNFO® 64 or HWiNFO® ARM64 depending on platform.</p><p><strong>HWiNFO® 64</strong>/<strong>ARM64</strong> are <strong>FREEWARE</strong> for <strong>Non-Commercial</strong> use only. Check <a href="https://www.hwinfo.com/licenses">Licensing</a> and upgrade to <a href="https://www.hwinfo.com/licenses"><strong>Pro</strong></a>.</p></div></div><div class="col-md-6 col-lg-4"><div class="download"><div class="header"> <img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/logo-sm.png" alt=""> <img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/win.png" alt=""></div><h2>Portable<div>for Windows 95 and later<br>x86, x64 or ARM64 platform</div></h2> <sub>Version 8.16</sub><div class="xds xds-ga"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-9898019300161556" data-ad-slot="2680408836"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="btn-wrap"><div class="btn btn-less"> Free Download<div class="download-btn"><ul><li><a href="https://sourceforge.net/projects/hwinfo/files/Windows_Portable/hwi_816.zip/download" target="_blank">SourceForge (Fast CDN)</a></li><li><a href="https://www.hwinfo.com/files/hwi_816.zip" target="_blank">Local (U.S.)</a></li><li><a href="https://www.sac.sk/download/utildiag/hwi_816.zip" target="_blank">SAC ftp (SK)</a></li><li><a href="https://www.hwinfo.com/OldFoss" target="_blank">Old versions (Archive)</a></li></ul></div></div><div class="btn btn-gray btn-sm"> Download latest Beta v8.17-5620<div class="download-btn"><ul><li><a href="https://sourceforge.net/projects/hwinfo/files/Windows_Beta/hwi_817_5620.zip" target="_blank">SourceForge (Fast CDN)</a></li><li><a href="https://www.hwinfo.com/files/hwi_817_5620.zip" target="_blank">Primary backup (U.S.)</a></li></ul></div></div></div><p>Portable package containing HWiNFO® 32, HWiNFO® 64 and HWiNFO® ARM64. Also available as Beta pre-release versions.</p><p><strong>HWiNFO® 32</strong> (legacy) is <strong>FREEWARE</strong>.</p><p><strong>HWiNFO® 64/ARM64</strong> are <strong>FREEWARE</strong> for <strong>Non-Commercial</strong> use only. Check <a href="https://www.hwinfo.com/licenses">Licensing</a> and upgrade to <a href="https://www.hwinfo.com/licenses"><strong>Pro</strong></a>.</p></div></div><div class="col-md-6 col-lg-4 offset-md-3 offset-lg-0"><div class="download"><div class="header dos"> <img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/logo-sm.png" alt=""> <img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/dos.png" alt=""></div><h2>Portable<div>for DOS<br>Vintage x86 systems</div></h2> <sub>&nbsp;</sub><div class="xds xds-ga"><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:inline-block;width:250px;height:250px" data-ad-client="ca-pub-9898019300161556" data-ad-slot="2680408836"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div><div class="btn-wrap"><div class="btn"> Free Download<div class="download-btn"><ul><li><a href="https://sourceforge.net/projects/hwinfo/files/DOS_Version/HWINF624.ZIP" target="_blank">SourceForge (Fast CDN)</a></li><li><a href="https://www.hwinfo.com/files/HWINF624.ZIP">Local (U.S.)</a></li><li><a href="https://www.majorgeeks.com/files/details/hwinfo.html" target="_blank">MajorGeeks</a></li><li><a href="https://www.vogons.org/viewtopic.php?f=46&t=72670" target="_blank">VOGONS Forum</a></li><li><a href="https://www.sac.sk/download/utildiag/hwinf624.zip" target="_blank">SAC (SK)</a></li></ul></div></div></div><p>HWiNFO® for DOS, useful for legacy systems running DOS.<br /> <strong>FREEWARE</strong> and free distributable as-is.</p></div></div></div> <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9898019300161556" data-ad-slot="9200871208" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script> </div></div></article><footer><div class="footer-site"><div class="container"><div class="help text-center"><h2>Help and support</h2> <a href="https://www.hwinfo.com/forum/" target="_blank" class="btn btn-white">Forum</a> <a href="https://www.hwinfo.com/sdk/" class="btn btn-white">SDK</a></div><div class="row"><div class="col-sm-6 contact-n-copy"> Martin Malík, REALiX, s.r.o.<br /> B. Nemcovej 28, 90101 Malacky, Slovakia<div class="hwmail"> <a onmouseover="window.status='Send e-mail'; return true" onmouseout="window.status=''; return true" href="javascript:DoSomething('56#52#60#57#33#58#111#56#56#21#61#34#60#59#51#58#123#54#58#56');"><img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/mail.jpg" alt="kontakt" width="115" height="20"></a></div><div class="hwmail2"></div> <br> <a href="https://www.hwinfo.com/news.xml/"><i class="ionicons ion-social-rss"></i> &nbsp; RSS</a><br /> <a href="https://www.hwinfo.com/privacy-policy/"><i class="ionicons ion-lock-combination"></i> &nbsp; Cookie & Privacy policy</a> <br> <br> &copy; 1995 - 2024 Martin Malik, REALiX s.r.o.</div><div class="col-sm-6 paypal-donate"><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"> <input type="hidden" name="cmd" value="_donations" /> <input type="hidden" name="business" value="R7UX6YA42LCH4" /> <input type="hidden" name="item_name" value="Donation for HWiNFO (EUR)" /> <input type="hidden" name="currency_code" value="EUR" /> <button type="submit"><img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/paypal-donate-eur.png" alt="Paypal DONATE in Euros"></button></form><form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank"> <input type="hidden" name="cmd" value="_donations" /> <input type="hidden" name="business" value="R7UX6YA42LCH4" /> <input type="hidden" name="item_name" value="Donation for HWiNFO (USD)" /> <input type="hidden" name="currency_code" value="USD" /> <button type="submit"><img src="https://www.hwinfo.com/wp-content/themes/hwinfo/img/paypal-donate-usd.png" alt="Paypal DONATE in US Dollars"></button></form></div></div></div></div></footer> <script type="text/javascript" src="https://www.hwinfo.com/wp-includes/js/dist/hooks.min.js?ver=4d63a3d491d11ffd8ac6" id="wp-hooks-js"></script> <script type="text/javascript" src="https://www.hwinfo.com/wp-includes/js/dist/i18n.min.js?ver=5e580eb46a90c2b997e6" id="wp-i18n-js"></script> <script type="text/javascript" id="wp-i18n-js-after">wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );</script> <script type="text/javascript" id="contact-form-7-js-before">var wpcf7 = {
+    "api": {
+        "root": "https:\/\/www.hwinfo.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};</script> <script defer src="https://www.hwinfo.com/wp-content/cache/autoptimize/js/autoptimize_57479e56d03c6983613607a55d80394f.js"></script></body></html><!-- WP Fastest Cache file was created in 0.29271912574768 seconds, on 22-12-24 19:57:56 -->
