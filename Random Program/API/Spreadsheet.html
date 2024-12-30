@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZilkyHandycraft</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3e5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>ZilkyHandycraft</h1>
+        <div id="form-content">
+            <!-- Form content will be inserted here -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('data1.csv')
+                .then(response => response.text())
+                .then(data => {
+                    const rows = data.split('\n').map(row => row.split(','));
+                    const formContent = document.getElementById('form-content');
+
+                    rows.forEach(row => {
+                        const [name, email, phone, message] = row;
+
+                        const formGroupName = document.createElement('div');
+                        formGroupName.classList.add('form-group');
+                        formGroupName.innerHTML = `<label>Name</label><input type="text" value="${name}" readonly>`;
+                        formContent.appendChild(formGroupName);
+
+                        const formGroupEmail = document.createElement('div');
+                        formGroupEmail.classList.add('form-group');
+                        formGroupEmail.innerHTML = `<label>Email</label><input type="text" value="${email}" readonly>`;
+                        formContent.appendChild(formGroupEmail);
+
+                        const formGroupPhone = document.createElement('div');
+                        formGroupPhone.classList.add('form-group');
+                        formGroupPhone.innerHTML = `<label>Phone</label><input type="text" value="${phone}" readonly>`;
+                        formContent.appendChild(formGroupPhone);
+
+                        const formGroupMessage = document.createElement('div');
+                        formGroupMessage.classList.add('form-group');
+                        formGroupMessage.innerHTML = `<label>Message</label><textarea readonly>${message}</textarea>`;
+                        formContent.appendChild(formGroupMessage);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
