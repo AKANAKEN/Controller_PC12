@@ -39,8 +39,20 @@ call Halaman_Kalkulator.bat
 goto end
 
 :file3
-call speedtest.exe
-goto end
+echo Pilih opsi:
+echo 1. Jalankan script Python
+echo 2. Install speedtest-cli dengan pip
+set /p choice=Masukkan pilihan Anda (1 atau 2):
+
+if "%choice%"=="1" (
+    python speedtest.py
+) else if "%choice%"=="2" (
+    pip install speedtest-cli
+) else (
+    echo Pilihan tidak valid
+)
+pause
+goto menu
 
 :file4
 call wifi.bat
@@ -48,4 +60,5 @@ goto end
 
 :end
 echo Selesai menjalankan file.
+exit
 pause

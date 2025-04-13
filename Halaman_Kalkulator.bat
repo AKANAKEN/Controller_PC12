@@ -42,23 +42,16 @@ goto menu
 
 
 :watt_calculation
-echo Masukkan nilai Tegangan (Volt):
-set /p voltage=
-if not defined voltage (
-    echo Anda belum memasukkan nilai Tegangan.
-    goto watt_calculation
-)
+echo Kalkulator Daya (Watt)
+echo ==================================
+set /p volt="Masukkan Tegangan (Volt): "
+set /p amp="Masukkan Arus (Ampere): "
 
-echo Masukkan nilai Arus (Ampere):
-set /p current=
-if not defined current (
-    echo Anda belum memasukkan nilai Arus.
-    goto watt_calculation
-)
+:: Menggunakan PowerShell untuk menghitung nilai desimal
+for /f "delims=" %%A in ('powershell -command "%volt% * %amp%"') do set watt=%%A
 
-set /a watt=%voltage% * %current%
-
-echo Daya (Watt) = %watt% Watt
+echo ==================================
+echo Daya yang dihasilkan: %watt% Watt
 pause
 
 goto menu
